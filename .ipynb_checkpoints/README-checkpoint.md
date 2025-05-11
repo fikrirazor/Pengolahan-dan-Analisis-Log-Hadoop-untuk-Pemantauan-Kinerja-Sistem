@@ -90,5 +90,5 @@ Pull request dan issue dipersilakan! Pastikan format log konsisten dan dokumenta
 
 **Lisensi:** MIT
 
-**Author:** @fikrirazor
+**Author:** @namapengguna
 
