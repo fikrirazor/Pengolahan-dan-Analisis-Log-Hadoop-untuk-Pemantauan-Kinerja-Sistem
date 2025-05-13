@@ -1,13 +1,12 @@
 # Hadoop Log Analysis
 
-Analisis log sistem Hadoop untuk mengekstrak insight operasional, mendeteksi anomali, dan mengoptimalkan kinerja sistem distribusi berbasis Hadoop.
+Analisis log sistem Hadoop untuk mengekstrak insight operasional
 
 ## 📌 Deskripsi Proyek
 
 Proyek ini bertujuan untuk:
 
 * Mengekstrak informasi penting dari log Hadoop.
-* Mengidentifikasi anomali atau error yang sering terjadi.
 * Menyediakan visualisasi dan statistik untuk membantu analisis performa dan stabilitas.
 
 ## 📂 Sumber Data
@@ -15,30 +14,23 @@ Proyek ini bertujuan untuk:
 Menggunakan dataset dari repositori publik:
 
 * GitHub: [logpai/loghub](https://github.com/logpai/loghub)
-* Dataset: `Hadoop` log (tersedia dalam format teks)
+* Dataset: `Hadoop mapreduce job` log (tersedia dalam format teks)
 
 ## ⚙️ Teknologi yang Digunakan
 
 * Python 3.10+
 * Pandas & NumPy
 * Regex / Log Parsing
-* Matplotlib / Seaborn / Plotly (visualisasi)
-* Scikit-learn (analisis/anomali)
-* LogParser Toolkit (opsional)
+* Matplotlib  (visualisasi)
+
 
 ## 🏗️ Struktur Proyek
 
 ```
-├── data/
-│   └── hadoop_logs/           # Folder log Hadoop mentah
-├── notebooks/
-│   └── exploratory_analysis.ipynb
-├── src/
-│   ├── preprocess.py          # Pembersihan dan parsing log
-│   ├── analysis.py            # Statistik dan deteksi anomali
-│   └── visualize.py           # Pembuatan grafik dan chart
+├── Dataset/
+│   └── hadoop/           # Folder log Hadoop mentah
+├── Pengolahan File Log Aktivitas Pengguna.ipynb
 ├── README.md
-└── requirements.txt
 ```
 
 ## 🚀 Langkah Eksekusi
@@ -48,43 +40,31 @@ Menggunakan dataset dari repositori publik:
 $ git clone https://github.com/namauser/hadoop-log-analysis.git
 $ cd hadoop-log-analysis
 
-# Install dependensi
-$ pip install -r requirements.txt
-
-# Jalankan analisis
-$ python src/preprocess.py
-$ python src/analysis.py
-```
-
 ## ✅ Output
 
 * Statistik jumlah error, warning, dan event per waktu.
-* Visualisasi frekuensi event.
-* Deteksi anomali log.
-* Ringkasan top N event dominan dan error.
+* Visualisasi aktivitas_per_hari
+* aktivitas_level_per_hari
+* jumlah_log_per_level
+* aktivitas_log (opsional: rolling mean)
+
 
 ## 📊 Contoh Visualisasi
 
-* Histogram frekuensi error
-* Heatmap korelasi event antar komponen
-* Timeline error & warning
 
 ## 🧪 Dataset & Format Log
 
 ```
 <DATE> <TIME> <LEVEL> <COMPONENT>: <MESSAGE>
 Example:
-2009-07-20 03:59:57,796 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Receiving block blk_-5627252809418057504
+2015-10-17 15:37:56,547 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1445062781478_0011_000001
 ```
 
 ## 📎 Referensi
 
 * [Loghub Dataset](https://github.com/logpai/loghub)
-* [LogParser Toolkit](https://github.com/logpai/logparser)
 
 ## 📬 Kontribusi
-
-Pull request dan issue dipersilakan! Pastikan format log konsisten dan dokumentasi jelas.
 
 ---
 
