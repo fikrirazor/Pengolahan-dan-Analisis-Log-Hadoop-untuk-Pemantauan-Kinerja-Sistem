@@ -37,8 +37,8 @@ Menggunakan dataset dari repositori publik:
 
 ```bash
 # Clone repositori
-$ git clone https://github.com/namauser/hadoop-log-analysis.git
-$ cd hadoop-log-analysis
+$ git clone git@github.com:fikrirazor/Pengolahan-dan-Analisis-Log-Hadoop-untuk-Pemantauan-Kinerja-Sistem.git
+$ cd Pengolahan-dan-Analisis-Log-Hadoop-untuk-Pemantauan-Kinerja-Sistem
 
 ## ✅ Output
 
